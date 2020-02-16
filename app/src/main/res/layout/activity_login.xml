@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/hanlight_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idInput"
+        style="@style/InputUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:hint="@string/id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/pwInput"
+        style="@style/InputUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="@string/pw"
+        app:layout_constraintEnd_toEndOf="@id/idInput"
+        app:layout_constraintStart_toStartOf="@id/idInput"
+        app:layout_constraintTop_toBottomOf="@id/idInput" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@id/pwInput"
+        app:layout_constraintStart_toStartOf="@id/idInput"
+        app:layout_constraintTop_toBottomOf="@id/pwInput"
+        android:layout_marginTop="68dp"/>
+
+    <View
+        android:id="@+id/loginBtnDiv"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:background="#d3d3d3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"/>
+
+    <TextView
+        android:id="@+id/findIdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/findId"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/loginDiv1"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        android:layout_marginEnd="19dp"/>
+
+    <View
+        android:id="@+id/loginDiv1"
+        android:layout_width="1dp"
+        android:layout_height="17dp"
+        android:background="#d3d3d3"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintEnd_toStartOf="@id/findPwBtn"
+        android:layout_marginEnd="19dp"/>
+
+    <TextView
+        android:id="@+id/findPwBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/findPw"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/loginBtnDiv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="11dp"/>
+
+    <View
+        android:id="@+id/loginDiv2"
+        android:layout_width="1dp"
+        android:layout_height="17dp"
+        android:background="#d3d3d3"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintStart_toEndOf="@id/findPwBtn"
+        android:layout_marginStart="19dp"/>
+
+    <TextView
+        android:id="@+id/signUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signUp"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintStart_toEndOf="@id/loginDiv2"
+        android:layout_marginStart="19dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
