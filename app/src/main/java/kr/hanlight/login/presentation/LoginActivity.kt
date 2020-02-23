@@ -1,4 +1,4 @@
-package kr.hanlight.login
+package kr.hanlight.login.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,4 +10,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
+
+
 }

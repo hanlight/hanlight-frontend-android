@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/hanlight_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <kr.hanlight.login.views.FocusableEditText
+        android:id="@+id/idInput"
+        style="@style/InputUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/bg_user_input_default"
+        android:hint="@string/id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <kr.hanlight.login.views.FocusableEditText
+        android:id="@+id/pwInput"
+        style="@style/InputUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_user_input_default"
+        android:hint="@string/pw"
+        app:layout_constraintEnd_toEndOf="@id/idInput"
+        app:layout_constraintStart_toStartOf="@id/idInput"
+        app:layout_constraintTop_toBottomOf="@id/idInput" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        app:cardBackgroundColor="#a3a3a3"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="@id/pwInput"
+        app:layout_constraintStart_toStartOf="@id/idInput"
+        app:layout_constraintTop_toBottomOf="@id/pwInput">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/login"
+            android:textColor="@android:color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/loginBtnDiv"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:background="#d3d3d3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
+    <TextView
+        android:id="@+id/findIdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:text="@string/findId"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintEnd_toStartOf="@id/loginDiv1"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+
+    <View
+        android:id="@+id/loginDiv1"
+        android:layout_width="1dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="19dp"
+        android:background="#d3d3d3"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintEnd_toStartOf="@id/findPwBtn"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+
+    <TextView
+        android:id="@+id/findPwBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/findPw"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtnDiv" />
+
+    <View
+        android:id="@+id/loginDiv2"
+        android:layout_width="1dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="19dp"
+        android:background="#d3d3d3"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintStart_toEndOf="@id/findPwBtn"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+
+    <TextView
+        android:id="@+id/signUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:text="@string/signUp"
+        android:textColor="#8d8d8d"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintStart_toEndOf="@id/loginDiv2"
+        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

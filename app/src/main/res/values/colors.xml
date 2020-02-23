@@ -5,5 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
 
-    <color name="deactiveEditText">#6d6d6d</color>
+    <color name="userInputDefault">#a1a1a1</color>
+    <color name="userInputFocus">#4470ff</color>
+    <color name="userInputHint">#6d6d6d</color>
 </resources>
