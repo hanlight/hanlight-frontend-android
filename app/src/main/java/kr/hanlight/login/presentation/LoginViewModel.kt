@@ -10,15 +10,27 @@ import kr.hanlight.login.entity.User
 
 class LoginViewModel(
     private val login: Login
-): ViewModel() {
+) : ViewModel() {
     private val disposable: CompositeDisposable = CompositeDisposable()
+
+    private val _user = MutableLiveData<Lce<User>>()
+    val user: LiveData<Lce<User>>
+        get() = _user
 
     fun login(id: String, pw: String) {
         disposable.add(
             login.excute(Pair(id, pw))
                 .subscribe({
-
-                }, Throwable::printStackTrace)
+                    _user.value = Lce.Content(it)
+                }, {
+                    _user.value = Lce.Error(it)
+                    it.printStackTrace()
+                })
         )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.dispose()
     }
 }

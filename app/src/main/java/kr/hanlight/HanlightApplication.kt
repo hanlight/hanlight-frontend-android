@@ -1,6 +1,7 @@
 package kr.hanlight
 
 import android.app.Application
+import kr.hanlight.login.loginModule
 import kr.network.backendModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -17,7 +18,7 @@ class HanlightApplication : Application() {
 
             androidLogger()
 
-            module { listOf(backendModule) }
+            modules(listOf(loginModule, backendModule))
         }
     }
 }

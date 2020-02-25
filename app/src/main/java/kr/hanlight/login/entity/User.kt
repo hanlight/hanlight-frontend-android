@@ -1,5 +1,13 @@
 package kr.hanlight.login.entity
 
 data class User(
-    private val token: String
+    val accessToken: String?,
+    val type: String,
+    val admin: Boolean,
+    val name: String,
+    val id: String,
+    val major: String,
+    val grade: Int,
+    val classNum: Int?,
+    val studentNum: Int?
 )
