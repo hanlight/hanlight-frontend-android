@@ -2,7 +2,7 @@ package kr.hanlight.login.data
 
 import kr.hanlight.common.Mapper
 import kr.hanlight.login.entity.User
-import kr.network.response.model.UserRaw
+import kr.hanlight.network.response.model.UserRaw
 
 class UserMapper : Mapper<UserRaw, User> {
     override fun map(from: UserRaw): User {

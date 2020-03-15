@@ -1,16 +1,14 @@
 package kr.hanlight.login.presentation
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.jakewharton.rxbinding3.widget.TextViewTextChangeEvent
 import com.jakewharton.rxbinding3.widget.textChangeEvents
-import com.jakewharton.rxbinding3.widget.textChanges
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -19,8 +17,8 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_login.*
 import kr.hanlight.R
 import kr.hanlight.common.Lce
+import kr.hanlight.signup.presentation.SignUpActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.util.*
 
 class LoginFragment : Fragment() {
     companion object {
@@ -81,7 +79,7 @@ class LoginFragment : Fragment() {
         }
 
         txtSignUp.setOnClickListener {
-
+            startActivity(Intent(activity, SignUpActivity::class.java))
         }
     }
 

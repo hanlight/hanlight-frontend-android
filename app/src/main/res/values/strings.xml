@@ -9,4 +9,11 @@
     <string name="findPw">비밀번호 찾기</string>
     <string name="signUp">회원가입</string>
 
+    <!-- 회원가입 -->
+    <string name="userKey">회원가입 키</string>
+    <string name="userKeyIntroduce">제공된 핀 번호를 입력해주세요.</string>
+    <string name="phoneNumber">전화번호</string>
+    <string name="phoneNumberIntroduce">휴대폰 번호를 - 빼고 입력해주세요.</string>
+    <string name="certification">인증하기</string>
+
 </resources>

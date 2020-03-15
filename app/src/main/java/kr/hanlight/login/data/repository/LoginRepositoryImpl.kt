@@ -6,7 +6,7 @@ import io.reactivex.schedulers.Schedulers
 import kr.hanlight.login.data.UserMapper
 import kr.hanlight.login.domain.LoginRepository
 import kr.hanlight.login.entity.User
-import kr.network.service.login.LoginService
+import kr.hanlight.network.service.login.LoginService
 
 class LoginRepositoryImpl(
     private val loginService: LoginService
