@@ -8,4 +8,7 @@
     <color name="userInputDefault">#a1a1a1</color>
     <color name="userInputFocus">#4470ff</color>
     <color name="userInputHint">#6d6d6d</color>
+
+    <color name="inactivatedButton">#a3a3a3</color>
+    <color name="activatedButton">#4470ff</color>
 </resources>

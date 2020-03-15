@@ -43,20 +43,4 @@ class FocusableEditText(
             context.getDrawable(R.drawable.bg_user_input_default)
         }
     }
-
-    override fun draw(canvas: Canvas?) {
-//        val rectF = RectF()
-//
-//        val paint = Paint()
-//        paint.isAntiAlias = true
-//        paint.style = Paint.Style.STROKE
-//
-//        paint.color = currentColor
-//
-//        canvas?.let {
-//            rectF.set(0f, 0f, width.toFloat(), height.toFloat())
-//            canvas.drawRoundRect(rectF, 7f, 7f, paint)
-//        }
-        super.draw(canvas)
-    }
 }

@@ -48,16 +48,18 @@
         android:layout_marginTop="68dp"
         app:cardBackgroundColor="#a3a3a3"
         app:cardCornerRadius="7dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/pwInput"
         app:layout_constraintStart_toStartOf="@id/idInput"
         app:layout_constraintTop_toBottomOf="@id/pwInput">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:text="@string/login"
             android:textColor="@android:color/white" />
 
@@ -76,16 +78,16 @@
         app:layout_constraintTop_toBottomOf="@id/loginBtn" />
 
     <TextView
-        android:id="@+id/findIdBtn"
+        android:id="@+id/txtFindId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="19dp"
         android:text="@string/findId"
         android:textColor="#8d8d8d"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
         app:layout_constraintEnd_toStartOf="@id/loginDiv1"
-        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
 
     <View
         android:id="@+id/loginDiv1"
@@ -93,12 +95,12 @@
         android:layout_height="17dp"
         android:layout_marginEnd="19dp"
         android:background="#d3d3d3"
-        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
-        app:layout_constraintEnd_toStartOf="@id/findPwBtn"
-        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
+        app:layout_constraintEnd_toStartOf="@id/txtFindPw"
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
 
     <TextView
-        android:id="@+id/findPwBtn"
+        android:id="@+id/txtFindPw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -115,20 +117,20 @@
         android:layout_height="17dp"
         android:layout_marginStart="19dp"
         android:background="#d3d3d3"
-        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
-        app:layout_constraintStart_toEndOf="@id/findPwBtn"
-        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
+        app:layout_constraintStart_toEndOf="@id/txtFindPw"
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
 
     <TextView
-        android:id="@+id/signUpBtn"
+        android:id="@+id/txtSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:text="@string/signUp"
         android:textColor="#8d8d8d"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/findPwBtn"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
         app:layout_constraintStart_toEndOf="@id/loginDiv2"
-        app:layout_constraintTop_toTopOf="@id/findPwBtn" />
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

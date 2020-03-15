@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitBuilder {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://test-backend.hanlight.kr/api/dev/"
 
     fun getInstance(context: Context): Retrofit {
         val okHttpBuilder = OkHttpClient.Builder()
