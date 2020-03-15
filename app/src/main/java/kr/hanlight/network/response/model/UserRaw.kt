@@ -1,4 +1,4 @@
-package kr.network.response.model
+package kr.hanlight.network.response.model
 
 data class UserRaw(
     val accessToken: String,

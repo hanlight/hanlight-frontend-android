@@ -1,6 +1,6 @@
-package kr.network
+package kr.hanlight.network
 
-import kr.network.service.login.LoginService
+import kr.hanlight.network.service.login.LoginService
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
