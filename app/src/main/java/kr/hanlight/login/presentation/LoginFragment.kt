@@ -20,7 +20,8 @@ import kr.hanlight.common.Lce
 import kr.hanlight.signup.presentation.SignUpActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
+
     companion object {
         fun newInstance(): LoginFragment {
             return LoginFragment()
@@ -30,10 +31,6 @@ class LoginFragment : Fragment() {
     private val viewModel: LoginViewModel by viewModel()
 
     private val disposable: CompositeDisposable = CompositeDisposable()
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -87,13 +84,11 @@ class LoginFragment : Fragment() {
         viewModel.user.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Lce.Content -> {  }
-                is Lce.Error -> { showAlert() }
+                is Lce.Error -> {
+                    idInput.showAlertOutline()
+                    pwInput.showAlertOutline()
+                }
             }
         })
-    }
-
-    private fun showAlert() {
-        idInput.showAlertOutline()
-        pwInput.showAlertOutline()
     }
 }

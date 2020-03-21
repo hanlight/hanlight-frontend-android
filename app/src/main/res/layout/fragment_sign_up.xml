@@ -9,13 +9,14 @@
 
     <ImageView
         android:id="@+id/backBtn"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_back_button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:padding="10dp"/>
 
     <ImageView
         android:id="@+id/logo"
@@ -39,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="@id/logo"/>
 
     <TextView
-        android:id="@+id/certificationKeyTxt"
+        android:id="@+id/authKeyTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/userKey"
@@ -51,13 +52,13 @@
         android:layout_marginTop="40dp"/>
 
     <kr.hanlight.login.views.FocusableEditText
-        android:id="@+id/certificationKeyInput"
+        android:id="@+id/authKeyInput"
         style="@style/InputUserInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_user_input_default"
         android:hint="@string/userKeyIntroduce"
-        app:layout_constraintTop_toBottomOf="@id/certificationKeyTxt"
+        app:layout_constraintTop_toBottomOf="@id/authKeyTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
@@ -71,8 +72,8 @@
         android:text="@string/phoneNumber"
         android:textSize="12sp"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="@id/certificationKeyTxt"
-        app:layout_constraintTop_toBottomOf="@id/certificationKeyInput"
+        app:layout_constraintStart_toStartOf="@id/authKeyTxt"
+        app:layout_constraintTop_toBottomOf="@id/authKeyInput"
         android:layout_marginTop="30dp" />
 
     <kr.hanlight.login.views.FocusableEditText
@@ -83,8 +84,8 @@
         android:background="@drawable/bg_user_input_default"
         android:hint="@string/phoneNumberIntroduce"
         app:layout_constraintTop_toBottomOf="@id/phoneNumberTxt"
-        app:layout_constraintStart_toStartOf="@id/certificationKeyInput"
-        app:layout_constraintEnd_toEndOf="@id/certificationKeyInput"
+        app:layout_constraintStart_toStartOf="@id/authKeyInput"
+        app:layout_constraintEnd_toEndOf="@id/authKeyInput"
         android:layout_marginTop="8dp"/>
 
     <kr.hanlight.common.widgets.CardButton
