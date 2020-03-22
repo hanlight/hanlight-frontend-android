@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <ImageView
@@ -40,6 +41,19 @@
         app:layout_constraintEnd_toEndOf="@id/idInput"
         app:layout_constraintStart_toStartOf="@id/idInput"
         app:layout_constraintTop_toBottomOf="@id/idInput" />
+
+    <TextView
+        android:id="@+id/errorMessageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/pwInput"
+        app:layout_constraintStart_toStartOf="@id/pwInput"
+        android:layout_marginTop="8dp"
+        tools:visibility="visible"
+        tools:text="@string/emptyPwError"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loginBtn"

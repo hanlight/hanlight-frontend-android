@@ -8,12 +8,22 @@
     <string name="findId">ID찾기</string>
     <string name="findPw">비밀번호 찾기</string>
     <string name="signUp">회원가입</string>
+    <string name="notFindUser">한빛에 등록되지 않은 아이디거나,\n아이디 또는 비밀번호를 잘못 입력하셨습니다.</string>
+    <string name="emptyPwError">비밀번호를 입력해주세요.</string>
 
     <!-- 회원가입 -->
     <string name="userKey">회원가입 키</string>
     <string name="userKeyIntroduce">제공된 핀 번호를 입력해주세요.</string>
+    <string name="invalidAuthKey">회원가입 키가 올바른 형식이 아닙니다.</string>
     <string name="phoneNumber">전화번호</string>
     <string name="phoneNumberIntroduce">휴대폰 번호를 - 빼고 입력해주세요.</string>
+    <string name="invalidPhoneNumber">전화번호가 올바른 형식이 아닙니다.</string>
     <string name="certification">인증하기</string>
-
+    <string name="idRule">5~20자의 영문 소문자, 숫자와 특수기호 _ , / </string>
+    <string name="pwRule">8~16자의 영문 대소문자, 숫자나 특수문자(키보드1~0)</string>
+    <string name="checkPw">비밀번호 확인</string>
+    <string name="DuplicateAccount">중복되는 아이디입니다.</string>
+    <string name="invalidId">5~20자의 영문 소문자, 숫자와 특수기호 _ , / 만 사용 가능합니다.</string>
+    <string name="invalidPw">8~16자의 영문 대소문자, 숫자나 특수문자(키보드1~0)만 사용 가능합니다.</string>
+    <string name="invalidCheckPw">비밀번호와 일치하지 않습니다.</string>
 </resources>

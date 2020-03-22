@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".signup.presentation.SignUpFragment">
+    tools:context=".signup.presentation.SignUpAuthFragment">
 
     <ImageView
         android:id="@+id/backBtn"
@@ -66,6 +66,18 @@
         android:layout_marginEnd="26dp"/>
 
     <TextView
+        android:id="@+id/authKeyErrorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invalidAuthKey"
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        app:layout_constraintStart_toStartOf="@id/authKeyTxt"
+        app:layout_constraintTop_toBottomOf="@id/authKeyInput"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"/>
+
+    <TextView
         android:id="@+id/phoneNumberTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,6 +100,18 @@
         app:layout_constraintEnd_toEndOf="@id/authKeyInput"
         android:layout_marginTop="8dp"/>
 
+    <TextView
+        android:id="@+id/phoneNumberErrorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invalidAuthKey"
+        android:textSize="10sp"
+        android:textColor="#ff0000"
+        app:layout_constraintStart_toStartOf="@id/phoneNumberTxt"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberInput"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"/>
+
     <kr.hanlight.common.widgets.CardButton
         android:id="@+id/certificationBtn"
         android:layout_width="0dp"
@@ -102,6 +126,7 @@
         app:layout_constraintTop_toBottomOf="@id/phoneNumberInput"
         app:layout_constraintStart_toStartOf="@id/phoneNumberInput"
         app:layout_constraintEnd_toEndOf="@id/phoneNumberInput"
-        android:layout_marginTop="44dp"/>
+        android:layout_marginTop="44dp"
+        app:cardElevation="0dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

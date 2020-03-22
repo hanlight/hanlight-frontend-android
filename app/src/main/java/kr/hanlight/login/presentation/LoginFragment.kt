@@ -3,9 +3,7 @@ package kr.hanlight.login.presentation
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.jakewharton.rxbinding3.widget.textChangeEvents

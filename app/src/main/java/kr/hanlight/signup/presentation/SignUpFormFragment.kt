@@ -2,26 +2,26 @@ package kr.hanlight.signup.presentation
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.jakewharton.rxbinding3.widget.textChangeEvents
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.BiFunction
+import io.reactivex.functions.Function3
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_sign_up.*
-
+import kotlinx.android.synthetic.main.fragment_sign_up_form.*
 import kr.hanlight.R
 
 /**
- * 회원가입 페이지
+ * A simple [Fragment] subclass.
  */
-class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
+class SignUpFormFragment : Fragment(R.layout.fragment_sign_up_form) {
 
     companion object {
-        fun newInstance(): SignUpFragment {
-            return SignUpFragment()
+        fun newInstance(): SignUpFormFragment {
+            return SignUpFormFragment()
         }
     }
 
@@ -31,28 +31,24 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
-        initViewModels()
     }
 
     private fun initViews() {
         disposable.add(
             Observable.combineLatest(
-                    authKeyInput.textChangeEvents().skipInitialValue().map { it.text.isNotBlank() },
-                    phoneNumberInput.textChangeEvents().skipInitialValue().map { it.text.isNotBlank() },
-                    BiFunction<Boolean, Boolean, Boolean> { key, number -> (key && number) }
+                    idInput.textChangeEvents().skipInitialValue().map { it.text.isNotBlank() },
+                    pwInput.textChangeEvents().skipInitialValue().map { it.text.isNotBlank() },
+                    checkPwInput.textChangeEvents().skipInitialValue().map { it.text.isNotBlank() },
+                    Function3<Boolean, Boolean, Boolean, Boolean> { id, pw, checkPw -> (id && pw && checkPw) }
                 ).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
                     if (it) {
-                        certificationBtn.setCardBackgroundColor(Color.parseColor("#4470ff"))
+                        signUpButton.setCardBackgroundColor(Color.parseColor("#4470ff"))
                     } else {
-                        certificationBtn.setCardBackgroundColor(Color.parseColor("#a3a3a3"))
+                        signUpButton.setCardBackgroundColor(Color.parseColor("#a3a3a3"))
                     }
                 }
         )
-    }
-
-    private fun initViewModels() {
-
     }
 }

@@ -11,7 +11,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, SignUpFragment.newInstance())
+            .replace(R.id.fragmentContainer, SignUpAuthFragment.newInstance())
             .commit()
     }
 }
