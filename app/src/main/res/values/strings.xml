@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hanlight</string>
+
+    <!-- 로그인 -->
+    <string name="id">아이디</string>
+    <string name="pw">비밀번호</string>
+    <string name="login">로그인</string>
+    <string name="findId">ID찾기</string>
+    <string name="findPw">비밀번호 찾기</string>
+    <string name="signUp">회원가입</string>
+
+</resources>
