@@ -26,4 +26,5 @@
     <string name="invalidId">5~20자의 영문 소문자, 숫자와 특수기호 _ , / 만 사용 가능합니다.</string>
     <string name="invalidPw">8~16자의 영문 대소문자, 숫자나 특수문자(키보드1~0)만 사용 가능합니다.</string>
     <string name="invalidCheckPw">비밀번호와 일치하지 않습니다.</string>
+    <string name="termsOfUse">전화번호 인증 시 <u>이용 약관</u>과 <u>개인정보처리방침</u>에 동의하게 됩니다.</string>
 </resources>
